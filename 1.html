@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rotating Diamond Boxes</title>
+  <style>
+    body {
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .diamond-container {
+      position: relative;
+      width: 150px;
+      height: 150px;
+    }
+
+    .square {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      transform: rotate(45deg);
+      animation: spin 4s linear infinite;
+      transition: transform 0.3s ease;
+    }
+
+    /* Individual positions and colors */
+    .top {
+      top: 0;
+      left: 40px;
+      background-color: #3cb3d3;
+    }
+
+    .left {
+      top: 40px;
+      left: 0;
+      background-color: #3c79d3;
+    }
+
+    .right {
+      top: 40px;
+      right: 0;
+      background-color: #6789d3;
+    }
+
+    .bottom {
+      bottom: 0;
+      left: 40px;
+      background-color: #80d3e0;
+    }
+
+    .square:hover {
+      transform: rotate(45deg) scale(1.1);
+    }
+
+    /* Animation keyframe */
+    @keyframes spin {
+      0% {
+        transform: rotate(45deg);
+      }
+      100% {
+        transform: rotate(405deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="diamond-container">
+    <div class="square top"></div>
+    <div class="square left"></div>
+    <div class="square right"></div>
+    <div class="square bottom"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .head{
+            width: 100%;
+            height: 100vh;
+            border:1px solid black;
+
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 100px;
+            position: absolute;
+            animation: moving 2s infinite;
+        }
+        @keyframes moving{
+            0%{left: 0px; top: 0px;}
+            20%{left: 200px; top: 100px;}
+            40%{left: 400px;top: 0px;}
+            60%{left: 600px; top: 100px;}
+            80%{left: 0px; top: 800px;}
+            100%{left: 100px; top: 1000px;
+        }}
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div class="box">
+
+        </div>
+    </div>
+</body>
+</html>
